@@ -16,7 +16,7 @@ public class TelaGenio extends javax.swing.JFrame {
      */
     public TelaGenio() {
         initComponents();
-        jlaFrase.setText("<html>Vou pensar em um valor entre 1 e 5.Tente adivinhar</html>");
+        jlaFrase.setText("<html>Vou pensar em um valor entre 1 e 5. Tente adivinhar</html>");
     }
 
     /**
@@ -41,11 +41,11 @@ public class TelaGenio extends javax.swing.JFrame {
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Classes/imagem.png"))); // NOI18N
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, -1, -1));
 
-        jlaFrase.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jlaFrase.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jlaFrase.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jlaFrase.setText("Frase");
         jlaFrase.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        getContentPane().add(jlaFrase, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 160, 80));
+        getContentPane().add(jlaFrase, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 160, 80));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setText("Valor");
@@ -56,6 +56,11 @@ public class TelaGenio extends javax.swing.JFrame {
 
         jbuPalpite.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jbuPalpite.setText("Palpite");
+        jbuPalpite.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbuPalpiteActionPerformed(evt);
+            }
+        });
         getContentPane().add(jbuPalpite, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, -1, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Classes/imagem pensamento (1).png"))); // NOI18N
@@ -63,6 +68,13 @@ public class TelaGenio extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jbuPalpiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbuPalpiteActionPerformed
+       Math.random();
+       double n = 1 + Math.random() * (6-1);
+       int valor = (int) n;
+        System.out.println(valor);
+    }//GEN-LAST:event_jbuPalpiteActionPerformed
 
     /**
      * @param args the command line arguments
