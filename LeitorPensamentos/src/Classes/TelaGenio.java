@@ -73,7 +73,13 @@ public class TelaGenio extends javax.swing.JFrame {
        Math.random();
        double n = 1 + Math.random() * (6-1);
        int valor = (int) n;
-        System.out.println(valor);
+       int num = Integer.parseInt(jspVal.getValue().toString());
+       
+       String f1 = "  ACERTOU  ";
+       String f2 = "<html> ERROU ! Eu pensei no valor " + valor + "</html>";
+       
+       String res = (valor==num)?f1:f2;
+       jlaFrase.setText(res);
     }//GEN-LAST:event_jbuPalpiteActionPerformed
 
     /**
